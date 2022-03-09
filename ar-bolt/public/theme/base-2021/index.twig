@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//www.algoritmeregister.org/css/main.css" />
+  <title>Algoritmeregister</title>
+  <style>
+  th, td { text-align: left; vertical-align: top;}
+  table { border: 0; border-collapse: collapse;}
+  .nowrap { white-space: nowrap; }
+  </style>
+</head>
+<body>
+  <div class="layout-overlay display-none">
+  <div class="w-max-wrapper mx-auto flex">
+    <div class="flex-1 px2">
+      <div class="layout-overlay-col"></div>
+    </div>
+    <div class="flex-1 px2">
+      <div class="layout-overlay-col"></div>
+    </div>
+    <div class="flex-1 px2">
+      <div class="layout-overlay-col"></div>
+    </div>
+    <div class="flex-1 px2">
+      <div class="layout-overlay-col"></div>
+    </div>
+    <div class="flex-1 px2 display-none md:display-block">
+      <div class="layout-overlay-col"></div>
+    </div>
+    <div class="flex-1 px2 display-none md:display-block">
+      <div class="layout-overlay-col"></div>
+    </div>
+    <div class="flex-1 px2 display-none md:display-block">
+      <div class="layout-overlay-col"></div>
+    </div>
+    <div class="flex-1 px2 display-none md:display-block">
+      <div class="layout-overlay-col"></div>
+    </div>
+    <div class="flex-1 px2 display-none md:display-block">
+      <div class="layout-overlay-col"></div>
+    </div>
+    <div class="flex-1 px2 display-none md:display-block">
+      <div class="layout-overlay-col"></div>
+    </div>
+    <div class="flex-1 px2 display-none md:display-block">
+      <div class="layout-overlay-col"></div>
+    </div>
+    <div class="flex-1 px2 display-none md:display-block">
+      <div class="layout-overlay-col"></div>
+    </div>
+  </div>
+</div>
+
+    <header class="bg-light-blue flex space-between p4">
+    <a href="/" class="flex">
+      <img src="//www.algoritmeregister.org/img/algoritmeregister-logo.svg" class="w-main-logo">
+    </a>
+    <nav class="flex align-center">
+      <a href="/" class="text-nav mr4">home</a>
+      <a href="/contact" class="text-nav mr4">contact</a>
+      <a href="https://www.github.com/Algoritmeregister">
+        <img src="//www.algoritmeregister.org/img/github-repo-link.svg" class="display-block">
+      </a>
+    </nav>
+  </header>
+
+  <div class="bg-light-blue">
+    <div class="w-max-wrapper mx-auto flex">
+      <div class="flex-1">
+        <img src="{{ record.image }}">
+      </div>
+      <div class="flex-1">
+        <h1 class="text-h1 mb3">{{ record.title }}</h1>
+        <div class="md-zone">
+          {{ record.introduction }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-max-wrapper mx-auto flex">
+    <div class="md-zone">
+      <table class="my5">
+        <thead>
+          <th class="text-h3 p2">Naam</th>
+          <th class="text-h3 p2">Afdeling</th>
+          <th class="text-h3 p2">Korte omschrijving</th>
+          <th class="text-h3 p2">Type</th>
+          <th class="text-h3 p2">Categorie</th>
+          <th class="text-h3 p2">Status</th>
+          <th class="text-h3 p2">Herzieningsdatum</th>
+        </thead>
+        {% setcontent registrations = 'registratie' latest limit 10 %}
+
+        {% for record in registrations %}
+          {# {{ dump(record) }} #}
+        <tr {% if loop.index is odd %}class="bg-light-blue"{% endif %}>
+          <td class="text-body p2">{{ record.name }}</td>
+          <td class="text-body p2">{{ record.department }}</td>
+          <td class="text-body p2">{{ record.description_short }}</td>
+          <td class="text-body p2 nowrap">{{ record.type }}</td>
+          <td class="text-body p2">{{ record.category }}</td>
+          <td class="text-body p2 nowrap">{#{{ record.status }}#}in ontwikkeling</td>
+          <td class="text-body p2">{{ record.revision_date }}</td>
+        {% endfor %}
+        </tr>
+      </table>
+    </div>
+  </div>
+
+
+    <footer>
+    <div class="w-max-wrapper mx-auto flex">
+      <p class="text-h4 my2 px2">&copy; 2022 - Algoritmeregister</p>
+    </div> 
+  </footer>
+</body>
+</html>

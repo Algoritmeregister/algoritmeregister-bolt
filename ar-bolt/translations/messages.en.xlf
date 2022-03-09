@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en" trgLang="en">
+  <file id="messages.en">
+    <unit id="ygD8z7Q" name="error">
+      <segment>
+        <source>error</source>
+        <target>error</target>
+      </segment>
+    </unit>
+    <unit id="GosMe_o">
+      <segment>
+        <source>A colon cannot be used in an unquoted mapping value at line 96 (near "info: Wat de naam die gebruikt wordt om dit algoritme aan te duiden? Voorbeeld: 'WMO voorspelling Rotterdam' of 'Crowd-monitoring Enschede'.").</source>
+        <target>A colon cannot be used in an unquoted mapping value at line 96 (near "info: Wat de naam die gebruikt wordt om dit algoritme aan te duiden? Voorbeeld: 'WMO voorspelling Rotterdam' of 'Crowd-monitoring Enschede'.").</target>
+      </segment>
+    </unit>
+    <unit id="ChtadH5" name="Duplicate key &quot;registrations&quot; detected at line 92.">
+      <segment>
+        <source>Duplicate key "registrations" detected at line 92.</source>
+        <target>Duplicate key "registrations" detected at line 92.</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>
